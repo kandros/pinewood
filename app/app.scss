@@ -117,3 +117,33 @@ $color3: #E3D3D3;
     width: 50%;
   }
 }
+
+footer {
+  display: flex;
+  color: white;
+  align-items: center;
+  height: 80px;
+  padding: 0 16px;
+  background-color: #285c72;
+  justify-content:space-between;
+
+  .company-name {
+    font-family: 'pinewood', sans-serif;
+  }
+
+  nav {
+    display: flex;
+    .nav-item {
+      font-family: 'pinewood', sans-serif;
+      font-size: 80%;
+      margin-right: 8px;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
