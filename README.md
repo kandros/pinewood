@@ -1,1 +1,3 @@
-demo: pinewood.surge.sh
+# static responsive website
+
+demo: http://pinewood.surge.sh
