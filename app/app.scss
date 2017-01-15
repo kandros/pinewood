@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'pinewood';
+  src: url('fonts/pinewood.ttf') format('truetype')
+}
+
+$color1: #A7CAE8;
+$color2: #5F96B4;
+$color3: #E3D3D3;
+
+.hero {
+  position: relative;
+}
+
+.hero-title {
+  position: absolute;
+  width: 100%;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.22);
+  top: 40%;
+  font-family: 'pinewood', sans-serif;
+
+  @media screen and (min-width: 550px) {
+    font-size: 85px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 120px;
+  }
+}
+
+.hero-image {
+  display: block;
+  max-width: 100%;
+}
+
+.circles {
+  width: 800px;
+  max-width: 100%;
+  margin: 100px auto 0;
+  justify-content: space-around;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.circle {
+  height: 180px;
+  margin: 0 auto 60px;
+  width: 180px;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    background-color: $color1;
+  }
+  &:nth-child(2) {
+    background-color: $color2;
+  }
+  &:nth-child(3) {
+    background-color: $color3;
+  }
+
+  @media screen and (max-width: 768px) {
+    &:nth-child(2), &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.map-wrapper {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.map-image {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  width: 800px;
+  transform: perspective(900px) rotateX(60deg);
+  box-shadow: 0 19px 25px 0px rgba(0, 0, 0, 0.4);
+  transition: 1.8s all;
+  position: relative;
+  top: 0;
+
+  &:hover {
+    transform: perspective(0) rotateX(0);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    top: 50px;
+  }
+}
+
+.info-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+}
+
+.info-block {
+  height: 500px;
+  width: 100%;
+  &:nth-child(1) {
+    background-color: $color1;
+  }
+  &:nth-child(2) {
+    background-color: $color2;
+    align-self: flex-end;
+  }
+  &:nth-child(3) {
+    background-color: $color3;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 120px;
+    width: 50%;
+  }
+}
